@@ -82,6 +82,7 @@ define Build/Prepare
 		wget -qO - https://github.com/daeuniverse/dae/pull/763.patch | patch -p1 ; \
 		wget -qO - https://github.com/daeuniverse/dae/pull/839.patch | patch -p1 ; \
 		wget -qO - https://github.com/daeuniverse/dae/commit/e844f29.patch | patch -p1 ; \
+		wget -qO - https://github.com/daeuniverse/dae/compare/main...olicesx:dae:snifffix.patch | patch -p1 ; \
 		go mod tidy ; \
 		popd ; \
 		pushd $(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/wing ; \
